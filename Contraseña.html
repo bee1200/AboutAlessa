@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Protegido con Contraseña</title>
+</head>
+<body>
+
+<h2>Acceso Protegido con Contraseña</h2>
+
+<p>Ingresa tu contraseña para acceder al enlace:</p>
+
+<input type="password" id="passwordInput">
+<button onclick="verificarContraseña()">Acceder</button>
+
+<script>
+function verificarContraseña() {
+    // Obtener la contraseña ingresada por el usuario
+    var contraseñaIngresada = document.getElementById("passwordInput").value;
+
+    // Comparar con la contraseña previamente establecida
+    var contraseñaCorrecta = "tuContraseña"; // Cambiar por tu contraseña real
+
+    if (contraseñaIngresada === contraseñaCorrecta) {
+        // Si la contraseña es correcta, redireccionar a la página deseada
+        window.location.href = "https://www.ejemplo.com/pagina-secreta";
+    } else {
+        // Si la contraseña es incorrecta, mostrar un mensaje de error
+        alert("Contraseña incorrecta. Intenta de nuevo.");
+    }
+}
+</script>
+
+</body>
+</html>
